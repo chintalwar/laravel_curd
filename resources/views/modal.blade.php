@@ -49,6 +49,16 @@
                         </div>
                     </div>
                 </div>
+                 <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-2" style="margin-top:7px;">
+                            {!! Form::label('Gender','gender') !!}
+                        </div>
+                        <div class="col-md-10">
+                            {!! Form::text('Gender', '', ['class' => 'form-control', 'placeholder' => 'Input gender', 'required']) !!}
+                        </div>
+                    </div>
+                </div>
                 <div class="form-group">
                     <div class="row">
 					   <div class="col-md-2" style="margin-top:7px;">

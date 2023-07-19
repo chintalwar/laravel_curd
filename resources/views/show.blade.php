@@ -14,20 +14,21 @@
 		<table class="table table-bordered table-responsive table-striped">
 			<thead>
 				<th>Fisrtname</th>
-				<th>Lastname</th>
 				<th>Email</th>
 				<th>Phone</th>
+				<th>gender</th>
 				<th>State</th>
 				<th>Action</th>
 			</thead>
 			<tbody>
 				@foreach($members as $member)
 					<tr>
-						<td>{{$member->firstname}}</td>
-						<td>{{$member->lastname}}</td>
+						<td>{{ucfirst($member->firstname.' '.$member->lastname)}}</td>
+					
 						<td>{{$member->email}}</td>
 						<td>{{$member->phone}}</td>
-						<td>{{$member->state}}</td>
+						<td>{{ucfirst($member->gender)}}</td>
+						<td>{{ucfirst($member->state)}}</td>
 						<td><a href="#edit{{$member->id}}" data-toggle="modal" class="btn btn-success"><i class='fa fa-edit'></i> Edit</a> <a href="#delete{{$member->id}}" data-toggle="modal" class="btn btn-danger"><i class='fa fa-trash'></i> Delete</a>
 							@include('action')
 						</td>

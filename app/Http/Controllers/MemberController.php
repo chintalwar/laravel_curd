@@ -26,6 +26,7 @@ class MemberController extends Controller
     	$member->lastname = $request->input('lastname');
         $member->email = $request->input('email');
         $member->phone = $request->input('Phone');
+        $member->gender = $request->input('Gender');
         $member->state = $request->input('resoureceName');
   		$member->save();
 
