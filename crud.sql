@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2023 at 04:57 PM
+-- Generation Time: Jul 19, 2023 at 05:45 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -33,6 +33,7 @@ CREATE TABLE `members` (
   `lastname` varchar(191) NOT NULL,
   `email` varchar(191) NOT NULL,
   `phone` varchar(50) NOT NULL,
+  `gender` varchar(20) NOT NULL,
   `state` varchar(191) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
@@ -43,9 +44,10 @@ CREATE TABLE `members` (
 -- Dumping data for table `members`
 --
 
-INSERT INTO `members` (`id`, `firstname`, `lastname`, `email`, `phone`, `state`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'soham', 'Kumar1', 'summary@gmail.com', '2454244242', 'Maharashtra', '2023-07-18 21:23:27', '2023-07-18 21:29:59', '2023-07-18 14:23:27'),
-(2, 'divya', 'Kumar', 'tssdfdf2@gmail.com', '2454244249', 'Delhi', '2023-07-18 21:34:18', '2023-07-18 21:34:18', '2023-07-18 14:34:18');
+INSERT INTO `members` (`id`, `firstname`, `lastname`, `email`, `phone`, `gender`, `state`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'soham', 'Kumar1', 'summary@gmail.com', '2454244242', 'male', 'Maharashtra', '2023-07-18 21:23:27', '2023-07-18 21:29:59', '2023-07-18 14:23:27'),
+(2, 'divya', 'Kumar', 'tssdfdf2@gmail.com', '2454244249', 'female', 'Delhi', '2023-07-18 21:34:18', '2023-07-18 21:34:18', '2023-07-18 14:34:18'),
+(3, 'dipty', 'dev', 'd2@gmail.com', '2454244246', 'Female', 'Maharashtra', '2023-07-19 10:41:27', '2023-07-19 10:41:27', '2023-07-19 03:41:27');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +67,7 @@ ALTER TABLE `members`
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
